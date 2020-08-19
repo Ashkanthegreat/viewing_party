@@ -16,6 +16,10 @@ gem 'coffee-rails', '~> 4.2'
 gem 'bootsnap'
 gem 'jbuilder', '~> 2.5'
 gem 'omniauth-google-oauth2'
+gem 'faraday'
+gem 'figaro'
+gem 'google-api-client'
+gem 'omniauth'
 
 group :development, :test do
   gem 'pry'
