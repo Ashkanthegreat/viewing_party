@@ -20,6 +20,7 @@ gem 'faraday'
 gem 'figaro'
 gem 'google-api-client'
 gem 'omniauth'
+gem 'selenium-webdriver'
 
 group :development, :test do
   gem 'pry'
