@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   get 'auth/:provider/callback', to: 'sessions#googleAuth'
   get 'auth/failure', to: redirect('/')
   get '/dashboard', to: 'dashboard#show'
+  get '/movies', to: 'movies#index'
+  post '/friends', to: 'friendships#create'
 end
