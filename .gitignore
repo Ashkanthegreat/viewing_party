@@ -19,7 +19,5 @@
 # Ignore test coverage
 /coverage/*
 
-/config/initializers/omniauth.rb
-
 # Ignore application configuration
 /config/application.yml
