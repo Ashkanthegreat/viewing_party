@@ -7,32 +7,24 @@ RSpec.describe 'User Dashboard Page' do
     before :each do
       @user = mock_user
       visit '/'
-      click_on "Sign in with Google"
+      click_link "Sign in with Google"
 
     end
     it 'can display my name upon logging in' do
       expect(current_path).to eq("/dashboard")
       expect(page).to have_content("Welcome, #{@user["info"]["name"]}!")
-    end
-    it 'can see a button to discover movies' do
       expect(page).to have_button('Discover Movies')
-    end
-    it "can see a friends section" do
       expect(page).to have_css(".Friends")
-    end
-    it "can see a viewing parties section" do
       expect(page).to have_css(".Viewing_Parties")
-    end
-    it "redirects me to the discover page when clicking on the discover button" do
-      click_on "Discover Movies"
-      expect(current_path).to eq("/movies")
-    end
-    it "display the add friend form and associated text" do
       within ".Friends" do
         expect(page).to have_content "Add a Friend"
         expect(page).to have_button "Add Friend"
         expect(page).to have_content "You currently have no friends"
       end
+    end
+    it "redirects me to the discover page when clicking on the discover button" do
+      click_on "Discover Movies"
+      expect(current_path).to eq("/movies")
     end
     it "can add friends who are users" do
       user_1 = User.create!(email: "name@name_1.com", name: "User_1")
