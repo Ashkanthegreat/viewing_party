@@ -49,6 +49,7 @@ GEM
     bindex (0.8.1)
     bootsnap (1.4.8)
       msgpack (~> 1.0)
+    brakeman (4.9.0)
     builder (3.2.4)
     capybara (3.33.0)
       addressable
@@ -263,6 +264,8 @@ GEM
     selenium-webdriver (3.142.7)
       childprocess (>= 0.5, < 4.0)
       rubyzip (>= 1.2.2)
+    shoulda-matchers (4.3.0)
+      activesupport (>= 4.2.0)
     signet (0.14.0)
       addressable (~> 2.3)
       faraday (>= 0.17.3, < 2.0)
@@ -316,6 +319,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap
+  brakeman
   capybara
   coffee-rails (~> 4.2)
   faraday
@@ -334,6 +338,7 @@ DEPENDENCIES
   rubocop-rails
   sass-rails (~> 5.0)
   selenium-webdriver
+  shoulda-matchers
   simplecov
   travis
   tzinfo-data
