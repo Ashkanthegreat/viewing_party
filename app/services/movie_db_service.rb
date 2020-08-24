@@ -1,7 +1,7 @@
 class MovieDBService
   def top_rated_movies
     results = conn.get('movie/top_rated')
-    JSON.parse(results.body, symbolize_names: true)
+    json = JSON.parse(results.body, symbolize_names: true)
   end
 
   private
