@@ -1,0 +1,5 @@
+<h2>Top 10 Rated Movies:</h2>
+<% @movies.each do |movie| %>
+  <%= movie.title %>
+  <%= movie.vote_average %>
+<% end %>
