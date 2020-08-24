@@ -7,6 +7,6 @@ Rails.application.routes.draw do
   get '/auth/:provider/callback', to: 'sessions#googleAuth'
   get '/auth/failure', to: redirect('/')
   get '/dashboard', to: 'dashboard#show'
-  get '/movies/top_10', to: 'movies#top_10', as: 'top_10'
+  get '/movies/top_40', to: 'movies#top_40', as: 'top_40'
   post '/friends', to: 'friendships#create'
 end
