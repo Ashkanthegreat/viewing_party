@@ -4,7 +4,8 @@ require_relative '../facades/movie_search_facade.rb'
 
 class MoviesController < ApplicationController
   def index
+    keyword = params[:keyword]
     movie = MovieSearchFacade.new
-    @movies = movie.index
+    @movies = movie.get_movies(keyword)
   end
 end

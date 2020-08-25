@@ -5,7 +5,7 @@ class MovieDBService
   end
 
   def search_movie(keyword)
-    results = conn.get("/search/movie/?query=#{keyword}")
+    results = conn.get("search/movie?query=#{keyword}")
     JSON.parse(results.body, symbolize_names: true)
   end
 
