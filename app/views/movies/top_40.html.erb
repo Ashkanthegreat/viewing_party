@@ -1,0 +1,7 @@
+<h2>Top 40 Rated Movies:</h2>
+<% @movies.each do |movie| %><br>
+  <section id='movie-<%= movie.id %>'>
+    <p>Movie Title: <%= movie.title %></p>
+    <p>Average Rating: <%= movie.vote_average %></p>
+  </section>
+<% end %>
