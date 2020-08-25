@@ -12,7 +12,7 @@ RSpec.describe "Movies index page" do
       click_button "Discover Top 40 Rated Movies"
       expect(current_path).to eq(index_path)
       expect(page).to have_content("Top 40 Rated Movies:")
-      results = MovieSearchFacade.new.index
+      results = MovieSearchFacade.new.top_40
       expect(page).to have_content(results[0].title)
     end
   end
