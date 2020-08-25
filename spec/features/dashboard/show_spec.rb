@@ -50,5 +50,10 @@ RSpec.describe 'User Dashboard Page' do
         expect(page).to have_content "Email not found"
       end
     end
+    it 'Can see a form to discover movies by keyword' do
+      within ".Movies" do
+        expect(page).to have_button('Discover Movies with keyword')
+      end
+    end
   end
 end

@@ -1,6 +1,13 @@
 <h1>Welcome, <%= @user.name %>!</h1>
 
-<%= button_to "Discover Top 40 Rated Movies", index_path, method: :get %>
+<div class="Movies">
+  <%= button_to "Discover Top 40 Rated Movies", index_path, method: :get %>
+  <%= form_tag index_path do %>
+    <%= label_tag :keyword %>
+    <%= text_field_tag :keyword %>
+    <%= submit_tag 'Discover Movies with keyword' %>
+  <% end %>
+</div>
 
 <div class="Friends">
   <h3>Add a Friend</h3>
