@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   get '/auth/failure', to: redirect('/')
   get '/dashboard', to: 'dashboard#show'
   get '/movies/index', to: 'movies#index', as: 'index'
+  post '/movies/index', to: 'movies#index'
   post '/friends', to: 'friendships#create'
 end

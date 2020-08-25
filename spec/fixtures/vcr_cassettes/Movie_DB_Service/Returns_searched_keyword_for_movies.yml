@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/search/movie/query=Terminator?api_key=MOVIES_API_KEY
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '100'
+      Connection:
+      - keep-alive
+      Date:
+      - Tue, 25 Aug 2020 23:01:59 GMT
+      Server:
+      - openresty
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, DELETE, OPTIONS
+      Access-Control-Expose-Headers:
+      - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
+        Content-Length, Content-Range
+      Etag:
+      - c6ae201de4710990e66f7d8f767410f7
+      X-Cache:
+      - Error from cloudfront
+      Via:
+      - 1.1 0f653303bc95b26f01daff2926667902.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN50-C2
+      X-Amz-Cf-Id:
+      - x9wBYfzGiCGfNXz0nwH-iJDVH7MBhavBpwd9Qybnf0JJv9Sxoa9x2w==
+    body:
+      encoding: UTF-8
+      string: '{"status_code":34,"status_message":"The resource you requested could
+        not be found.","success":false}'
+  recorded_at: Tue, 25 Aug 2020 23:02:00 GMT
+recorded_with: VCR 6.0.0

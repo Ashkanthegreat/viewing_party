@@ -7,13 +7,18 @@ RSpec.describe MovieSearchFacade do
     expect(movie_facade.class).to eq(MovieSearchFacade)
   end
   describe "instance_methods" do
-    it "index" do
-      results = MovieSearchFacade.new.index
+    it "top_40" do
+      results = MovieSearchFacade.new.top_40
       expect(results.size).to eq(40)
       expect(results.first.class).to eq(Movie)
       expect(results.first.title.class).to eq(String)
       expect(results.first.id.class).to eq(Integer)
       expect(results.first.vote_average.class).to eq(Float)
+    end
+    it 'get_movies' do
+     results = MovieSearchFacade.new.get_movies('Terminator')
+     require "pry"; binding.pry
+           
     end
   end
 end

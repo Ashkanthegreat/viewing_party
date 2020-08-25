@@ -4,7 +4,6 @@ require_relative '../facades/movie_search_facade.rb'
 
 class MoviesController < ApplicationController
   def index
-    require "pry"; binding.pry
     movie = MovieSearchFacade.new
     @movies = movie.index
   end
