@@ -10,9 +10,9 @@ RSpec.describe "gets the top 40 rated movies from MoviesDB" do
     end
     it "allows the user to find the top 40 rated movies" do
       click_button "Discover Top 40 Rated Movies"
-      expect(current_path).to eq(top_40_path)
+      expect(current_path).to eq(index_path)
       expect(page).to have_content("Top 40 Rated Movies:")
-      results = MovieSearchFacade.new.top_40
+      results = MovieSearchFacade.new.index
       expect(page).to have_content(results[0].title)
     end
   end

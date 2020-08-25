@@ -7,8 +7,8 @@ RSpec.describe MovieSearchFacade do
     expect(movie_facade.class).to eq(MovieSearchFacade)
   end
   describe "instance_methods" do
-    it "top_40" do
-      results = MovieSearchFacade.new.top_40
+    it "index" do
+      results = MovieSearchFacade.new.index
       expect(results.size).to eq(40)
       expect(results.first.class).to eq(Movie)
       expect(results.first.title.class).to eq(String)

@@ -24,7 +24,7 @@ RSpec.describe 'User Dashboard Page' do
     end
     it "redirects me to the discover page when clicking on the discover button" do
       click_on "Discover Top 40 Rated Movies"
-      expect(current_path).to eq(top_40_path)
+      expect(current_path).to eq(index_path)
     end
     it "can add friends who are users" do
       user_1 = User.create!(email: "name@name_1.com", name: "User_1")

@@ -3,7 +3,7 @@ class MovieSearchFacade
     @movie_service = MovieDBService.new
   end
 
-  def top_40
+  def index
     movies_results = @movie_service.top_rated_movies
     @movies = []
     while @movies.size < 40
