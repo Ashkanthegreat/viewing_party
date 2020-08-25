@@ -2,10 +2,10 @@
 
 <div class="Movies">
   <%= button_to "Discover Top 40 Rated Movies", index_path, method: :get %>
-  <%= form_tag index_path do %>
+  <%= form_tag index_path, method: :get do %>
     <%= label_tag :keyword %>
     <%= text_field_tag :keyword %>
-    <%= submit_tag 'Discover Movies with keyword' %>
+    <%= submit_tag 'Discover Movies with keyword', keyword: :keyword %>
   <% end %>
 </div>
 
