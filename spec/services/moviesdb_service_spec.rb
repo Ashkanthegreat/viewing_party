@@ -9,4 +9,12 @@ RSpec.describe "Movie DB Service", :vcr do
     expect(movies[:results][0][:vote_count].class).to eq(Integer)
     expect(movies[:results][0][:vote_average].class).to eq(Float)
   end
+  it 'Returns searched keyword for movies' do
+    keyword = 'Terminator'
+    movies = MovieDBService.new.search_movie(keyword)
+    expect(movies[:results][0][:original_title].class).to eq(String)
+    expect(movies[:results][0][:popularity].class).to eq(Float)
+    expect(movies[:results][0][:vote_count].class).to eq(Integer)
+    expect(movies[:results][0][:vote_average].class).to eq(Float)
+  end
 end

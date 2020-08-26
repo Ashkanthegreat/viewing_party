@@ -1,4 +1,6 @@
 class FriendshipsController < ApplicationController
+  before_action :user_logged_in
+
   def create
     friend = User.find_by_email(params[:friend_email])
     if friend.present?
