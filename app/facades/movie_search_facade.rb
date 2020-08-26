@@ -13,23 +13,15 @@ class MovieSearchFacade
 
   def top_40
     movies_results = @movie_service.top_rated_movies
-    @movies = []
-    while @movies.size < 40
-      movies_results[:results].each do |movie_info|
-        @movies << Movie.new(movie_info)
-      end
+    @movies = movies_results.map do |movie_info|
+      Movie.new(movie_info)
     end
-    @movies
   end
 
   def keyword_search(keyword)
     movies_results = @movie_service.search_movie(keyword)
-    @movies = []
-    while @movies.size < 40
-      movies_results[:results].each do |movie_info|
-        @movies << Movie.new(movie_info)
-      end
+    @movies = movies_results.map do |movie_info|
+      Movie.new(movie_info)
     end
-    @movies
   end
 end
