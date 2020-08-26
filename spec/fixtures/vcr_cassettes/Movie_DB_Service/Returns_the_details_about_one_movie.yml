@@ -1,0 +1,135 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/movie/12345?api_key=MOVIES_API_KEY
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '100'
+      Connection:
+      - keep-alive
+      Date:
+      - Wed, 26 Aug 2020 23:16:35 GMT
+      Server:
+      - openresty
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, DELETE, OPTIONS
+      Access-Control-Expose-Headers:
+      - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
+        Content-Length, Content-Range
+      Cache-Control:
+      - public, max-age=21600
+      X-Memc:
+      - MISS
+      X-Memc-Key:
+      - 0651bbcde93abef272445cd00f0b61dc
+      X-Memc-Age:
+      - '0'
+      X-Memc-Expires:
+      - '21600'
+      Last-Modified:
+      - Wed, 26 Aug 2020 23:16:35 GMT
+      X-Cache:
+      - Error from cloudfront
+      Via:
+      - 1.1 e7ff4a714a3b1f464db9c76ee954a565.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN50-C2
+      X-Amz-Cf-Id:
+      - nECtr_XyTxwjyd3kPmZaRJCcuFkj01dFow2p8UsLE7DI5qj7gsnY5Q==
+    body:
+      encoding: UTF-8
+      string: '{"success":false,"status_code":34,"status_message":"The resource you
+        requested could not be found."}'
+  recorded_at: Wed, 26 Aug 2020 23:16:35 GMT
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/movie/12?api_key=MOVIES_API_KEY
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Wed, 26 Aug 2020 23:16:56 GMT
+      Server:
+      - openresty
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, DELETE, OPTIONS
+      Access-Control-Expose-Headers:
+      - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
+        Content-Length, Content-Range
+      Cache-Control:
+      - public, max-age=21600
+      X-Memc:
+      - HIT
+      X-Memc-Key:
+      - 2814a26c705ac3b11bd82aa447691468
+      X-Memc-Age:
+      - '18191'
+      X-Memc-Expires:
+      - '3409'
+      Etag:
+      - W/"d297e19a8ab9389f1d2b35a0dead2ecd"
+      Last-Modified:
+      - Wed, 26 Aug 2020 23:16:56 GMT
+      Vary:
+      - Accept-Encoding
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 9cefde3a3c84cc779d3c26a39c2e4430.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN50-C2
+      X-Amz-Cf-Id:
+      - BiGIfRYO8aGzOY9BcD24uCe-5BdKCfgWHLx7fNjdzpuA7iGPAVRA5A==
+    body:
+      encoding: ASCII-8BIT
+      string: '{"adult":false,"backdrop_path":"/dFYguAfeVt19qAbzJ5mArn7DEJw.jpg","belongs_to_collection":{"id":137697,"name":"Finding
+        Nemo Collection","poster_path":"/xwggrEugjcJDuabIWvK2CpmK91z.jpg","backdrop_path":"/2hC8HHRUvwRljYKIcQDMyMbLlxz.jpg"},"budget":94000000,"genres":[{"id":16,"name":"Animation"},{"id":10751,"name":"Family"}],"homepage":"http://movies.disney.com/finding-nemo","id":12,"imdb_id":"tt0266543","original_language":"en","original_title":"Finding
+        Nemo","overview":"Nemo, an adventurous young clownfish, is unexpectedly taken
+        from his Great Barrier Reef home to a dentist''s office aquarium. It''s up
+        to his worrisome father Marlin and a friendly but forgetful fish Dory to bring
+        Nemo home -- meeting vegetarian sharks, surfer dude turtles, hypnotic jellyfish,
+        hungry seagulls, and more along the way.","popularity":35.997,"poster_path":"/xVNSgrsvpcAHPnyKf2phYxyppNZ.jpg","production_companies":[{"id":3,"logo_path":"/1TjvGVDMYsj6JBxOAkUHpPEwLf7.png","name":"Pixar","origin_country":"US"}],"production_countries":[{"iso_3166_1":"US","name":"United
+        States of America"}],"release_date":"2003-05-30","revenue":940335536,"runtime":100,"spoken_languages":[{"iso_639_1":"en","name":"English"}],"status":"Released","tagline":"There
+        are 3.7 trillion fish in the ocean. They''re looking for one.","title":"Finding
+        Nemo","video":false,"vote_average":7.8,"vote_count":13918}'
+  recorded_at: Wed, 26 Aug 2020 23:16:56 GMT
+recorded_with: VCR 6.0.0

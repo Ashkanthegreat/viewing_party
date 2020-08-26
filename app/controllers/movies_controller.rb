@@ -8,4 +8,8 @@ class MoviesController < ApplicationController
     movie = MovieSearchFacade.new
     @movies = movie.get_movies(keyword)
   end
+
+  def show
+    @movie = MovieSearchFacade.new.return_movie(params[:id])
+  end
 end
