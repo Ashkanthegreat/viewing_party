@@ -24,4 +24,9 @@ class MovieSearchFacade
       Movie.new(movie_info)
     end
   end
+
+  def return_movie(id)
+    movie_info = @movie_service.movie_details(id)
+    Movie.new(movie_info)
+  end
 end
