@@ -10,6 +10,6 @@ class MoviesController < ApplicationController
   end
 
   def show
-
+    @movie = MovieSearchFacade.new.return_movie(params[:id])
   end
 end
