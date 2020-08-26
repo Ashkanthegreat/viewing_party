@@ -1,12 +1,22 @@
 class MovieDBService
   def top_rated_movies
-    results = conn.get('movie/top_rated')
-    JSON.parse(results.body, symbolize_names: true)
+    page1 = conn.get('movie/top_rated?page=1')
+    page2 = conn.get('movie/top_rated?page=2')
+    results1 = JSON.parse(page1.body, symbolize_names: true)
+    results1 = results1[:results]
+    results2 = JSON.parse(page2.body, symbolize_names: true)
+    results2 = results2[:results]
+    results1.concat(results2)
   end
 
   def search_movie(keyword)
-    results = conn.get("search/movie?query=#{keyword}")
-    JSON.parse(results.body, symbolize_names: true)
+    page1 = conn.get("search/movie?query=#{keyword}&page=1")
+    page2 = conn.get("search/movie?query=#{keyword}&page=2")
+    results1 = JSON.parse(page1.body, symbolize_names: true)
+    results1 = results1[:results]
+    results2 = JSON.parse(page2.body, symbolize_names: true)
+    results2 = results2[:results]
+    results1.concat(results2)
   end
 
   private
