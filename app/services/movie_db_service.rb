@@ -19,6 +19,11 @@ class MovieDBService
     results1.concat(results2)
   end
 
+  def movie_details(movie_id)
+    movie = conn.get("movie/#{movie_id}")
+    JSON.parse(movie.body, symbolize_names: true)
+  end
+
   private
 
   def conn
