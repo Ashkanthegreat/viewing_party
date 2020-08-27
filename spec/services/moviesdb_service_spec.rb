@@ -26,4 +26,14 @@ RSpec.describe "Movie DB Service", :vcr do
     movie = MovieDBService.new.movie_details(id)
     expect(movie[:original_title]).to eq("Finding Nemo")
   end
+  it "returns the cast members of a movie" do
+    id = 12
+    movie = MovieDBService.new.movie_credits(id)
+    expect(movie[:cast][0][:name]).to eq("Albert Brooks")
+  end
+  it 'returns the reviews of a movie' do
+    id = 12
+    movie = MovieDBService.new.movie_reviews(id)
+    expect(movie[:results][0][:author]).to eq("Dave09")
+  end
 end
